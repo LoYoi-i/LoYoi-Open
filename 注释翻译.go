@@ -41,7 +41,7 @@ var (
 	Url                = "http://api.fanyi.baidu.com/api/trans/vip/translate"
 )
 
-type TranslateModel struct {
+type TranslateModel struct { //百度翻译的数据结构体
 	Q     string
 	From  string
 	To    string
@@ -49,7 +49,7 @@ type TranslateModel struct {
 	Salt  int
 	Sign  string
 }
-type DictRequest struct {
+type DictRequest struct {  //彩云翻译的结构体
 	TransType string   `json:"trans_type"`
 	Source    []string `json:"source"`
 	RequestId string   `json:"request_id"`
