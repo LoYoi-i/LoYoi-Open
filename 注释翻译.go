@@ -36,8 +36,8 @@ var (
 	noHandle    int
 	baiduHandle int
 	dictPath    string = "D:\\Administrator\\Desktop\\测试\\翻译\\词典"
-	appID              = 20230101001516191
-	password           = "WGc3nw_M0wUTZisCrcjV"
+	appID              = 1 //百度翻译api的id
+	password           = ""//百度翻译api的key  需要自己申请
 	Url                = "http://api.fanyi.baidu.com/api/trans/vip/translate"
 )
 
@@ -467,7 +467,7 @@ func QueryCaiYun(word []string) (s string, err error) {
 	//设置请求头
 
 	req.Header.Set("Accept", "application/json")
-	req.Header.Set("X-Authorization", "token:q7fs67cj4d3dcg7qn0b5")
+	req.Header.Set("X-Authorization", "token:") //这里申请自己的token
 	// 发起请求
 	resp, err := client.Do(req)
 	if err != nil {
